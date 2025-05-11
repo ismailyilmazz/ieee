@@ -15,7 +15,7 @@ def generate_doc(request):
     data = {
         'title': request.POST.get('title'),
         'abstract': request.POST.get('abstract'),
-        'conclusion': request.POST.get('conclusion'),
+        'conclusion': request.POST.get('conclusion', ''),
         'references': request.POST.getlist('reference'),
         'authors': [],
         'sections': []
